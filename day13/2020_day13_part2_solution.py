@@ -15,12 +15,10 @@ for i in range(0, len(bus_list)):
         if int(bus_list[i]) > max_bus:
             max_bus = int(bus_list[i])
             max_bus_pos = i
-print(in_service)
 
-new_time = 50000000000000
+new_time = 700000000000000
 run = True
 while run == True:
-    print(new_time)
     for bus in in_service:
         if (new_time+max_bus_pos) % max_bus == 0:
             if (new_time + bus[0]) % bus[1] == 0:
